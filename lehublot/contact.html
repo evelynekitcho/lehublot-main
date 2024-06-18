@@ -42,7 +42,8 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><!-- <i class="fa fa-utensils me-3"> --></i>Le Hublot</h1>
+                    <h1 class="text-primary m-0"><img src="img/logo.png" alt="Logo Le Hublot">
+                        <!-- <i class="fa fa-utensils me-3"> </i> -->Le Hublot</h1>
                     <!-- <img src="lehublot/img/logo.png" alt="Logo Le Hublot"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -75,7 +76,8 @@
                         <div class="row gy-4">
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Adresse</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>Fidjrossè route des pêches, Cotonou - Bénin</p>
+                                <p><i class="fa fa-home text-primary me-2"></i>Fidjrossè route des pêches, Cotonou -
+                                    Bénin</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Email</h5>
@@ -83,17 +85,17 @@
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Téléphone</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>+229 69675555</p>
+                                <p><i class="fa fa-phone text-primary me-2"></i>+229 69675555</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?@/6.3507339,2.3416845,17zdata=!3m1!4b1!4m9!3m8!1s0x102356fc1210ee47:0x1f1a44380bd834cd!5m2!4m1!1i2!8m2!3d6.3507286!4d2.3442594!16s%2Fg%2F11gy2q_2cv?entry=ttu"
-                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126890.59276804242!2d2.2861922!3d6.3511718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102356fc1210ee47%3A0x1f1a44380bd834cd!2sLe%20Hublot!5e0!3m2!1sfr!2sbj!4v1718709450988!5m2!1sfr!2sbj"
+                            width="600px" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="col-md-6">
+                    <!--  <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <form>
                                 <div class="row g-3">
@@ -127,6 +129,56 @@
                                 </div>
                             </form>
                         </div>
+                    </div> -->
+                    <div class="col-md-6 bg-dark d-flex align-items-center">
+                        <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- <h5 class="section-title ff-secondary text-start text-primary fw-normal">Réservation</h5>
+                            <h1 class="text-white mb-4">Gastronomie & Guesthouse</h1> -->
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Nom">
+                                            <label for="name">Nom</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" id="datetime"
+                                                placeholder="Date & Heure" data-target="#date3"
+                                                data-toggle="datetimepicker" />
+                                            <label for="datetime">Date & Heure</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="select1">
+                                                <option value="1">Table</option>
+                                                <option value="2">Chambre</option>
+                                            </select>
+                                            <label for="select1">Sélectionnez</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Special Request" id="message"
+                                                style="height: 100px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Réserver
+                                            maintenant</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -149,14 +201,21 @@
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fidjrossè route des pêches,</p>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>à 100m de la station JNP,</p>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Cotonou - Bénin</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+229 69675555</p>
+                        <p class="mb-2"><i class=""></i>Cotonou - Bénin</p>
+                        <p class="mb-2"><i class="fa fa-envelope-open me-3"></i>info@lehublot.com</p>
+                        <p class="mb-2"><i class="fa fa-phone me-3"></i>+229 69675555</p>
                         <!-- <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p> -->
                         <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://api.whatsapp.com/send?phone=22969675555&text=Bonjour%20Hublot%2C%0A%0AJe%20souhaite%20passer%20une%20commande%20ou%20faire%20une%20r%C3%A9servation."><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-square btn-primary mx-1" href="https://www.facebook.com/hublotbenin/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary mx-1" href="https://x.com/hublotbenin"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.instagram.com/le_hublot_benin/?hl=fr"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -183,7 +242,8 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="https://lehublot-benin.com/">Le Hublot</a>, Tous droits réservés.
+                            &copy; <a class="border-bottom" href="https://lehublot-benin.com/">Le Hublot</a>, Tous
+                            droits réservés.
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a class="border-bottom" href="https://kksmartcom.com/">KK SMART
@@ -223,6 +283,4 @@
     <script src="js/main.js"></script>
 </body>
 
-
-<!-- Mirrored from themewagon.github.io/restoran/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2024 08:39:58 GMT -->
 </html>

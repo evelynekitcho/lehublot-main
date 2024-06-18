@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #90fef5;
+    --primary: #06c6c6;
     --light: #F1F8FF;
     --dark: #0F172B;
 }
@@ -142,7 +142,7 @@
         z-index: 999;
         background: transparent !important;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--dark) !important;
@@ -162,13 +162,13 @@
     animation: imgRotate 50s linear infinite;
 }
 
-@keyframes imgRotate { 
-    100% { 
-        transform: rotate(360deg); 
-    } 
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
 
@@ -414,7 +414,7 @@
 
 /*css de mes modifications*/
 /* #p4 {
-    background-color: #90fef5;
+    background-color: #06c6c6;
 } */
 
 /* #p3 {
