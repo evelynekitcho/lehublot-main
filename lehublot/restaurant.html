@@ -571,9 +571,61 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- formulaires -->
+    <script>
+		$(document).ready(function () {
+			$(".main_contact_form").validate({
+				rules: {
+					Nom: {
+						required: true
+					},
+					Email: {
+						required: true,
+						email: true
+					},
+					Date: {
+						required: true
+					},
+                    Selection: {
+						required: true
+					},
+                    Message: {
+						required: true
+					}
+				},
+				messages: {
+					Name: {
+						required: "Votre nom est obligatoire"
+					},
+					Email: {
+						email: "Votre email est invalide.",
+						required: "Votre email est obligatoire"
+					},
+					Date: {
+						email: "Votre format de date est invalide."
+					}
+				},
+				submitHandler: function (form) {
+					// Désactivez le bouton après la validation réussie
+					$(form).find(".main-btn").attr("disabled", true);
+
+					// Envoi réel du formulaire
+					form.submit();
+
+					// Videz les champs après l'envoi réussi
+					$(form).find('input, textarea').val('');
+				}
+			});
+
+			// Réactivez le bouton avant l'envoi réel du formulaire
+			$(".main_contact_form2").submit(function () {
+				$(this).find(".main-btn").removeAttr("disabled");
+			});
+		});
+	</script>
+    <!-- formulaires fin -->
 </body>
 
-
-<!-- Mirrored from themewagon.github.io/restoran/menu.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2024 08:39:58 GMT -->
 
 </html>

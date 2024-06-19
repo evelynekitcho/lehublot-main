@@ -693,31 +693,39 @@
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Réservation</h5>
                         <h1 class="text-white mb-4">Gastronomie & Guesthouse</h1>
-                        <form>
+                        
+                        <!-- https://formspree.io/f/mkndvwgg -->
+                        <form action="https://formspree.io/f/xwpeeeel" method="post"
+                        autocomplete="off" class="main_contact_form">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Nom">
+                                        <input type="text" class="form-control" id="name" name="Nom" placeholder="Nom"
+                                        required="" autocomplete="on" data-pattern="[A-Za-z]">
                                         <label for="name">Nom</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <input type="email" class="form-control" id="email" name="Email" placeholder="Email"
+                                        required="" autocomplete="on" 
+										data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+										data-message-error="Votre email est invalide">
                                         <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                            placeholder="Date & Heure" data-target="#date3"
-                                            data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Heure</label>
+                                        name="Date" placeholder="Date & Heure" data-target="#date3"
+                                            data-message-error="Votre format de date est invalide"
+                                            data-toggle="datetimepicker">
+                                        <label for="datetime">Date</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select" id="select1">
+                                        <select class="form-select" id="select1" name="Selection">
                                             <option value="1">Table</option>
                                             <option value="2">Chambre</option>
                                         </select>
@@ -727,7 +735,7 @@
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control" placeholder="Special Request" id="message"
-                                            style="height: 100px"></textarea>
+                                        name="Message" style="height: 100px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -933,6 +941,61 @@
 
     <!-- Template Javascript -->
     <script src="lehublot/js/main.js"></script>
+
+
+    <!-- formulaires -->
+    <script>
+		$(document).ready(function () {
+			$(".main_contact_form").validate({
+				rules: {
+					Nom: {
+						required: true
+					},
+					Email: {
+						required: true,
+						email: true
+					},
+					Date: {
+						required: true
+					},
+                    Selection: {
+						required: true
+					},
+                    Message: {
+						required: true
+					}
+				},
+				messages: {
+					Name: {
+						required: "Votre nom est obligatoire"
+					},
+					Email: {
+						email: "Votre email est invalide.",
+						required: "Votre email est obligatoire"
+					},
+					Date: {
+						email: "Votre format de date est invalide."
+					}
+				},
+				submitHandler: function (form) {
+					// Désactivez le bouton après la validation réussie
+					$(form).find(".main-btn").attr("disabled", true);
+
+					// Envoi réel du formulaire
+					form.submit();
+
+					// Videz les champs après l'envoi réussi
+					$(form).find('input, textarea').val('');
+				}
+			});
+
+			// Réactivez le bouton avant l'envoi réel du formulaire
+			$(".main_contact_form2").submit(function () {
+				$(this).find(".main-btn").removeAttr("disabled");
+			});
+		});
+	</script>
+    <!-- formulaires fin -->
 </body>
 
 </html>
