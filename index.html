@@ -696,9 +696,11 @@
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Réservation</h5>
                         <h1 class="text-white mb-4">Gastronomie & Guesthouse</h1>
                         
-                        <!-- https://formspree.io/f/mkndvwgg -->
+                        <!-- https://formspree.io/f/mkndvwgg 
+                         https://formspree.io/f/xwpeeeel-->
+                         
                         
-                        <form action="https://formspree.io/f/xwpeeeel" method="post"
+                        <form action="https://formspree.io/f/mkndvwgg" method="POST"
                         autocomplete="off" class="main_contact_form">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -744,7 +746,7 @@
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Réserver
-                                        maintenant</button>
+                                    maintenant</button>
                                 </div>
                             </div>
                         </form>
@@ -985,7 +987,7 @@
 					$(form).find(".main-btn").attr("disabled", true);
 
 					// Envoi réel du formulaire
-					form.submit();
+					form.submit(Message);
 
 					// Videz les champs après l'envoi réussi
 					$(form).find('input, textarea').val('');
