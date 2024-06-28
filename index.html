@@ -700,7 +700,7 @@
                          https://formspree.io/f/xwpeeeel-->
                          
                         
-                        <form action="https://formspree.io/f/mkndvwgg" method="POST"
+                        <!-- <form action="https://formspree.io/f/mkndvwgg" method="POST"
                         autocomplete="off" class="main_contact_form">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -746,6 +746,57 @@
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Réserver
+                                    maintenant</button>
+                                </div>
+                            </div>
+                        </form> -->
+                        <!-- whatsapp send datas -->
+                        <form action="">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="Nom" placeholder="Nom"
+                                        required="" autocomplete="on" data-pattern="[A-Za-z]">
+                                        <label for="name">Nom</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="Email" placeholder="Email"
+                                        required="" autocomplete="on" 
+										data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+										data-message-error="Votre email est invalide">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating date" id="date3" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" id="datetime"
+                                        name="Date" placeholder="Date & Heure" data-target="#date3"
+                                            data-message-error="Votre format de date est invalide"
+                                            data-toggle="datetimepicker">
+                                        <label for="datetime">Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="selection" name="Selection">
+                                            <option value="1">Table</option>
+                                            <option value="2">Chambre</option>
+                                        </select>
+                                        <label for="selection">Sélectionnez</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Special Request" id="message"
+                                        name="Message" style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" 
+                                    onclick="whatsapp_send_datas()">Réserver
                                     maintenant</button>
                                 </div>
                             </div>
@@ -950,56 +1001,49 @@
 
     <!-- formulaires -->
     <script>
-		$(document).ready(function () {
-			$(".main_contact_form").validate({
-				rules: {
-					Nom: {
-						required: true
-					},
-					Email: {
-						required: true,
-						email: true
-					},
-					Date: {
-						required: true
-					},
-                    Selection: {
-						required: true
-					},
-                    Message: {
-						required: true
-					}
-				},
-				messages: {
-					Name: {
-						required: "Votre nom est obligatoire"
-					},
-					Email: {
-						email: "Votre email est invalide.",
-						required: "Votre email est obligatoire"
-					},
-					Date: {
-						email: "Votre format de date est invalide."
-					}
-				},
-				submitHandler: function (form) {
-					// Désactivez le bouton après la validation réussie
-					$(form).find(".main-btn").attr("disabled", true);
+     /* whatsapp_send_datas */
+    /* function whsatsapp_send_datas(){
+        const nom=getElementById("nom").value;
+        const email=getElementById("email").value;
+        const datetime=getElementById("datetime").value;
+        const selection=getElementById("selection").value;
+        const message=getElementById("message").value;
 
-					// Envoi réel du formulaire
-					form.submit(Message);
+        const numeroWhatsapp="+22962040329";
 
-					// Videz les champs après l'envoi réussi
-					$(form).find('input, textarea').val('');
-				}
-			});
+        const url="https://wa.me" + numeroWhatsapp + "?text="
+        + "Nom" + nom + "%0a"
+        + "Email" + email + "%0a"
+        + "Date" + datetime + "%0a"
+        + "Selection" + selection + "%0a"
+        + "Message" + message + "%0a";
 
-			// Réactivez le bouton avant l'envoi réel du formulaire
-			$(".main_contact_form2").submit(function () {
-				$(this).find(".main-btn").removeAttr("disabled");
-			});
-		});
-	</script>
+        window.open(url,"_blank").focus();
+        
+    }   
+	 */	
+    
+     function whatsapp_send_datas(){
+        var numeroWhatsapp="22962040329";
+        var nom=getElementById("nom").value;
+        var email=getElementById("email").value;
+        var datetime=getElementById("datetime").value;
+        var selection=getElementById("selection").value;
+        var message=getElementById("message").value;
+
+
+        var url="https://wa.me/" + numeroWhatsapp + "?text="
+        +"*Nom :*" +nom+ "%0a"
+        +"*Email :*" +email+ "%0a"
+        +"*Date :*" +datetime+ "%0a"
+        +"*Selection :*" +selection+ "%0a"
+        +"*Message :*" +message+ "%0a%0a";
+
+        window.open(url,"_blank").focus();
+        
+    }   
+	
+    </script>
     <!-- formulaires fin -->
 </body>
 
