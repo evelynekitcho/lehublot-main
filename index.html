@@ -696,111 +696,62 @@
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Réservation</h5>
                         <h1 class="text-white mb-4">Gastronomie & Guesthouse</h1>
                         
-                        <!-- https://formspree.io/f/mkndvwgg 
-                         https://formspree.io/f/xwpeeeel-->
-                         
+                        <form id="myForm" action="">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input class="form-control" 
+                                        type="text" id="name" name="name" placeholder="Nom" 
+                                        required autocomplete="on" data-pattern="[A-Za-z]">
+                                        <label for="name">Nom</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input class="form-control" 
+                                        type="email" id="email" name="email" placeholder="Email" required
+                                            autocomplete="on" data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                            data-message-error="Votre email est invalide">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating date" data-target-input="nearest">
+                                        <input class="form-control datetimepicker-input" 
+                                        type="datetime" id="datetime" name="datetime" required
+                                            placeholder="Date & Heure" data-target="#datetime"
+                                            data-message-error="Votre format de date est invalide" data-toggle="datetimepicker">
+                                        <label for="datetime">Date</label>
+                                    </div>
+                                </div>
                         
-                        <!-- <form action="https://formspree.io/f/mkndvwgg" method="POST"
-                        autocomplete="off" class="main_contact_form">
-                            <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="Nom" placeholder="Nom"
-                                        required="" autocomplete="on" data-pattern="[A-Za-z]">
-                                        <label for="name">Nom</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="Email" placeholder="Email"
-                                        required="" autocomplete="on" 
-										data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-										data-message-error="Votre email est invalide">
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                        name="Date" placeholder="Date & Heure" data-target="#date3"
-                                            data-message-error="Votre format de date est invalide"
-                                            data-toggle="datetimepicker">
-                                        <label for="datetime">Date</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="select1" name="Selection">
-                                            <option value="1">Table</option>
-                                            <option value="2">Chambre</option>
+                                        <select class="form-select" 
+                                        id="category" name="category" required>
+                                            <option value="Table">Table</option>
+                                            <option value="Chambre">Chambre</option>
                                         </select>
-                                        <label for="select1">Sélectionnez</label>
+                                        <label for="category">Sélectionnez</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message"
-                                        name="Message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Special Request" 
+                                        id="message" name="message" required
+                                            style="height: 100px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Réserver
-                                    maintenant</button>
-                                </div>
-                            </div>
-                        </form> -->
-                        <!-- whatsapp send datas -->
-                        <form action="">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="Nom" placeholder="Nom"
-                                        required="" autocomplete="on" data-pattern="[A-Za-z]">
-                                        <label for="name">Nom</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="Email" placeholder="Email"
-                                        required="" autocomplete="on" 
-										data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-										data-message-error="Votre email est invalide">
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                        name="Date" placeholder="Date & Heure" data-target="#date3"
-                                            data-message-error="Votre format de date est invalide"
-                                            data-toggle="datetimepicker">
-                                        <label for="datetime">Date</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <select class="form-select" id="selection" name="Selection">
-                                            <option value="1">Table</option>
-                                            <option value="2">Chambre</option>
-                                        </select>
-                                        <label for="selection">Sélectionnez</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message"
-                                        name="Message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" 
-                                    onclick="whatsapp_send_datas()">Réserver
-                                    maintenant</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit" 
+                                    onclick="sendMessage()">Réserver
+                                        maintenant</button>
                                 </div>
                             </div>
                         </form>
+                    
+                        <script src="lehublot/js/script.js"></script>
                     </div>
                 </div>
             </div>
@@ -998,53 +949,6 @@
     <!-- Template Javascript -->
     <script src="lehublot/js/main.js"></script>
 
-
-    <!-- formulaires -->
-    <script>
-     /* whatsapp_send_datas */
-    /* function whsatsapp_send_datas(){
-        const nom=getElementById("nom").value;
-        const email=getElementById("email").value;
-        const datetime=getElementById("datetime").value;
-        const selection=getElementById("selection").value;
-        const message=getElementById("message").value;
-
-        const numeroWhatsapp="+22962040329";
-
-        const url="https://wa.me" + numeroWhatsapp + "?text="
-        + "Nom" + nom + "%0a"
-        + "Email" + email + "%0a"
-        + "Date" + datetime + "%0a"
-        + "Selection" + selection + "%0a"
-        + "Message" + message + "%0a";
-
-        window.open(url,"_blank").focus();
-        
-    }   
-	 */	
-    
-     function whatsapp_send_datas(){
-        var numeroWhatsapp="22962040329";
-        var nom=getElementById("nom").value;
-        var email=getElementById("email").value;
-        var datetime=getElementById("datetime").value;
-        var selection=getElementById("selection").value;
-        var message=getElementById("message").value;
-
-
-        var url="https://wa.me/" + numeroWhatsapp + "?text="
-        +"*Nom :*" +nom+ "%0a"
-        +"*Email :*" +email+ "%0a"
-        +"*Date :*" +datetime+ "%0a"
-        +"*Selection :*" +selection+ "%0a"
-        +"*Message :*" +message+ "%0a%0a";
-
-        window.open(url,"_blank").focus();
-        
-    }   
-	
-    </script>
-    <!-- formulaires fin -->
 </body>
 
 </html>
