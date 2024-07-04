@@ -41,7 +41,7 @@
     <div class="container-xxl bg-white p-0">
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
+                <a href="../index.html" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><img src="img/logo.png" alt="Logo Le Hublot">
                         <!-- <i class="fa fa-utensils me-3"> </i> -->Le Hublot</h1>
                     <!-- <img src="lehublot/img/logo.png" alt="Logo Le Hublot"> -->
@@ -51,9 +51,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="accueil.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="../lehublot/accueil.html" class="nav-item nav-link active">Accueil</a>
                         <a href="restaurant.html" class="nav-item nav-link">Restaurant</a>
-                        <a href="chambres.html" class="nav-item nav-link">Chambres</a>
+                        <a href="guesthouse.html" class="nav-item nav-link">Guesthouse</a>
                         <a href="#" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="contact.html" class="btn btn-primary py-2 px-4">Réservation</a>
@@ -89,95 +89,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <!-- <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126890.59276804242!2d2.2861922!3d6.3511718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102356fc1210ee47%3A0x1f1a44380bd834cd!2sLe%20Hublot!5e0!3m2!1sfr!2sbj!4v1718709450988!5m2!1sfr!2sbj"
-                            width="600px" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!--  <div class="col-md-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div> -->
+
+                    <!-- ajout -->
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                        <iframe class="position-relative rounded w-100 h-100"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d126890.59276804242!2d2.2861922!3d6.3511718!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102356fc1210ee47%3A0x1f1a44380bd834cd!2sLe%20Hublot!5e0!3m2!1sfr!2sbj!4v1718709450988!5m2!1sfr!2sbj"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
                     <div class="col-md-6 bg-dark d-flex align-items-center">
                         <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                             <!-- <h5 class="section-title ff-secondary text-start text-primary fw-normal">Réservation</h5>
                             <h1 class="text-white mb-4">Gastronomie & Guesthouse</h1> -->
-                            <form>
+                            <form id="myForm" action="">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Nom">
+                                            <input class="form-control" 
+                                            type="text" id="name" name="name" placeholder="Nom" 
+                                            required autocomplete="on" data-pattern="[A-Za-z]">
                                             <label for="name">Nom</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <input class="form-control" 
+                                            type="email" id="email" name="email" placeholder="Email" required
+                                                autocomplete="on" data-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                data-message-error="Votre email est invalide">
                                             <label for="email">Email</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                                placeholder="Date & Heure" data-target="#date3"
-                                                data-toggle="datetimepicker" />
-                                            <label for="datetime">Date & Heure</label>
+                                        <div class="form-floating date" data-target-input="nearest">
+                                            <input class="form-control datetimepicker-input" 
+                                            type="datetime" id="datetime" name="datetime" required
+                                                placeholder="Date & Heure" data-target="#datetime"
+                                                data-message-error="Votre format de date est invalide" data-toggle="datetimepicker">
+                                            <label for="datetime">Date</label>
                                         </div>
                                     </div>
+                            
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select1">
-                                                <option value="1">Table</option>
-                                                <option value="2">Chambre</option>
+                                            <select class="form-select" 
+                                            id="category" name="category" required>
+                                                <option value="Table">Table</option>
+                                                <option value="Chambre">Chambre</option>
                                             </select>
-                                            <label for="select1">Sélectionnez</label>
+                                            <label for="category">Sélectionnez</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message"
+                                            <textarea class="form-control" placeholder="Special Request" 
+                                            id="message" name="message" required
                                                 style="height: 100px"></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Réserver
+                                        <button class="btn btn-primary w-100 py-3" type="submit" 
+                                        onclick="sendMessage()">Réserver
                                             maintenant</button>
                                     </div>
                                 </div>
                             </form>
+                            <script src="js/script.js"></script>
                         </div>
                     </div>
                 </div>
@@ -281,6 +267,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    
 </body>
 
 </html>

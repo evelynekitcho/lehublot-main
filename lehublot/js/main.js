@@ -91,7 +91,25 @@
             $("#video").attr('src', $videoSrc);
         })
     });
+   /*  function whsatsapp_send_datas(){
+        const nom=getElementById("nom").value;
+        const email=getElementById("email").value;
+        const datetime=getElementById("datetime").value;
+        const selection=getElementById("selection").value;
+        const message=getElementById("message").value;
 
+        const numeroWhatsapp="+22962040329";
+
+        const url="https://wa.me" + numeroWhatsapp + "?text="
+        + "Nom" + nom + "%0a"
+        + "Email" + email + "%0a"
+        + "Date" + datetime + "%0a"
+        + "Selection" + selection + "%0a"
+        + "Message" + message + "%0a";
+
+        window.open(url,"_blank").focus();
+        
+    } */
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
